@@ -4,3 +4,8 @@ openrouteservice
 pandas
 folium
 geopy
+geopandas
+joblib
+matplotlib
+seaborn
+scikit-learn
