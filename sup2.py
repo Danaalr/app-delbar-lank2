@@ -409,10 +409,10 @@ elif st.session_state.page == "rutter":
             from shapely.geometry import LineString
 
             route_line = LineString([(lon, lat) for lon, lat in route_coords])
-            dataset_path = "data/gangvagar_majorna.geojson"
+            dataset_path = "gangvagar_majorna.geojson"
 
             if not os.path.exists(dataset_path):
-                st.warning("Dataset saknas i 'data/gangvagar_majorna.geojson'")
+                st.warning("Dataset saknas i 'gangvagar_majorna.geojson'")
                 st.stop()
 
             gangvagar = gpd.read_file(dataset_path)
@@ -626,7 +626,7 @@ elif st.session_state.page == "forum":
     import warnings
     warnings.filterwarnings("ignore")
 
-    path = "data/gangvagar_majorna.geojson"
+    path = "gangvagar_majorna.geojson"
     if os.path.exists(path):
         gangvagar = gpd.read_file(path)
         inclines = []
