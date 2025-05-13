@@ -107,7 +107,7 @@ st.markdown("""
 
 # 📊 Dataset-analys för Majorna-Linné
 with st.sidebar.expander("📊 Dataset-analys: Majorna-Linné"):
-    data_path = "data/gangvagar_majorna.geojson"
+    data_path = "data_path = "gangvagar_majorna.geojson"
     if os.path.exists(data_path):
         with open(data_path, encoding='utf-8') as f:
             data = json.load(f)
@@ -143,7 +143,7 @@ with st.sidebar.expander("📊 Dataset-analys: Majorna-Linné"):
         else:
             st.write("Ingen lutningsdata tillgänglig i datasetet.")
     else:
-        st.warning("Datasetet saknas. Lägg filen i data/gangvagar_majorna.geojson.")
+        st.warning("Datasetet saknas. Lägg filen i gangvagar_majorna.geojson")
 
 # API och session state
 ORS_API_KEY = "5b3ce3597851110001cf62487ab1e05ef5b94e489695d7a4058f8bcd"
