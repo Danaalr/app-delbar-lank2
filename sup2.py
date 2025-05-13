@@ -143,7 +143,7 @@ with st.sidebar.expander("📊 Dataset-analys: Majorna-Linné"):
         else:
             st.write("Ingen lutningsdata tillgänglig i datasetet.")
     else:
-        st.warning("Datasetet saknas. Lägg filen i data/gangvagar_majorna.geojson.")
+        st.warning("Datasetet saknas. Lägg filen i gangvagar_majorna.geojson.")
 
 # API och session state
 ORS_API_KEY = "5b3ce3597851110001cf62487ab1e05ef5b94e489695d7a4058f8bcd"
