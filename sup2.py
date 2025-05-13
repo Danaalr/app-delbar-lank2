@@ -107,7 +107,7 @@ st.markdown("""
 
 # 📊 Dataset-analys för Majorna-Linné
 with st.sidebar.expander("📊 Dataset-analys: Majorna-Linné"):
-    data_path = "gangvagar_majorna.geojson"
+    data_path = "data/gangvagar_majorna.geojson"
     if os.path.exists(data_path):
         with open(data_path, encoding='utf-8') as f:
             data = json.load(f)
@@ -143,7 +143,7 @@ with st.sidebar.expander("📊 Dataset-analys: Majorna-Linné"):
         else:
             st.write("Ingen lutningsdata tillgänglig i datasetet.")
     else:
-        st.warning("Datasetet saknas. Lägg filen i gangvagar_majorna.geojson.")
+        st.warning("Datasetet saknas. Lägg filen i data/gangvagar_majorna.geojson.")
 
 # API och session state
 ORS_API_KEY = "5b3ce3597851110001cf62487ab1e05ef5b94e489695d7a4058f8bcd"
@@ -409,10 +409,10 @@ elif st.session_state.page == "rutter":
             from shapely.geometry import LineString
 
             route_line = LineString([(lon, lat) for lon, lat in route_coords])
-            dataset_path = "gangvagar_majorna.geojson"
+            dataset_path = "data/gangvagar_majorna.geojson"
 
             if not os.path.exists(dataset_path):
-                st.warning("Dataset saknas i 'gangvagar_majorna.geojson'")
+                st.warning("Dataset saknas i 'data/gangvagar_majorna.geojson'")
                 st.stop()
 
             gangvagar = gpd.read_file(dataset_path)
@@ -626,7 +626,7 @@ elif st.session_state.page == "forum":
     import warnings
     warnings.filterwarnings("ignore")
 
-    path = "gangvagar_majorna.geojson"
+    path = "data/gangvagar_majorna.geojson"
     if os.path.exists(path):
         gangvagar = gpd.read_file(path)
         inclines = []
